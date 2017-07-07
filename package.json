@@ -1,0 +1,28 @@
+{
+  "name": "image-slider",
+  "version": "1.0.0",
+  "description": "Image slider web page",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/105ron/image-slider.git"
+  },
+  "keywords": [
+    "Image",
+    "Carosel"
+  ],
+  "author": "Rhys",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/105ron/image-slider/issues"
+  },
+  "homepage": "https://github.com/105ron/image-slider#readme",
+  "devDependencies": {
+    "browser-sync": "^2.18.12",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0"
+  }
+}
