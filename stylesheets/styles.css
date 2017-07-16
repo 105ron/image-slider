@@ -20,8 +20,16 @@ h1 {
   margin: auto;
   width: 800px;
   height: 560px;
-  background: #000;
-  z-index: 1;
+  overflow: hidden;
+}
+
+#image-strip {
+  position: relative;
+  width: 4000px;
+}
+
+.images {
+  margin-right: -4px; /* removes inline-block margin */
 }
 
 .arrows {
