@@ -16,6 +16,7 @@ const imageClass = {
 const bullets = [bulletZero, bulletOne, bulletTwo, bulletThree, bulletFour];
 let imagePosition = 0;
 
+
 const toggleImageClass = function toggleImageClass(position) {
   bullets[position].classList.toggle('active');
   imageStrip.classList.toggle(imageClass[position]);
@@ -28,8 +29,19 @@ rightArrow.addEventListener("click", function() {
   toggleImageClass(imagePosition);
 }, false);
 
+
 leftArrow.addEventListener("click", function() {
   toggleImageClass(imagePosition);
   imagePosition -= 1;
   toggleImageClass(imagePosition);
 }, false);
+
+const moveToBulletClick = function moveToBulletClick() {
+  toggleImageClass(imagePosition);
+  imagePosition = this.getAttribute("data-position");
+  toggleImageClass(imagePosition);
+}
+
+bullets.forEach(function(element) {
+  element.addEventListener('click', moveToBulletClick);
+});

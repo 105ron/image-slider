@@ -41,6 +41,10 @@ h1 {
   border: 1px solid #fff;
 }
 
+.bullets:hover, .arrows:hover {
+  cursor: pointer;
+}
+
 #left-arrow {
   /* add transparent background to grey button */
   background: url(../images/left-arrow.png);
