@@ -15,7 +15,7 @@ h1 {
   color: #fff;
 }
 
-#image-container {
+.image-container {
   position: relative;
   margin: auto;
   width: 800px;
@@ -57,8 +57,8 @@ h1 {
 }
 
 .bullets {
-  width: 10px;
-  height: 10px;
+  width: 16px;
+  height: 18px;
   position: absolute;
   bottom: 18px;
   border-radius: 50%;
@@ -67,21 +67,41 @@ h1 {
 }
 
 #bullet-0 {
-  left:354px;
+  left:341px;
 }
 
 #bullet-1 {
-  left:374px;
+  left:366px;
 }
 
 #bullet-2 {
-  left:394px;
+  left:391px;
 }
 
 #bullet-3 {
-  left:414px;
+  left:416px;
 }
 
 #bullet-4 {
-  left:434px;
+  left:441px;
+}
+
+.image-0 {
+  right: 0px;
+}
+
+.image-1 {
+  right: 800px;
+}
+
+.image-2 {
+  right: 1600px;
+}
+
+.image-3 {
+  right: 2400px;
+}
+
+.image-4 {
+  right: 3200px;
 }
