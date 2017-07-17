@@ -26,6 +26,8 @@ h1 {
 #image-strip {
   position: relative;
   width: 4000px;
+  -webkit-transition: 700ms;
+  transition: 700ms;
 }
 
 .images {
@@ -64,6 +66,10 @@ h1 {
   border-radius: 50%;
   background: rgba(240, 240, 240, 0.5);
   border: 1px solid rgba(255, 255, 255, 0.7);
+}
+
+.active {
+  background: rgba(130, 144, 250, 1);
 }
 
 #bullet-0 {

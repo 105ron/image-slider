@@ -17,8 +17,7 @@ const bullets = [bulletZero, bulletOne, bulletTwo, bulletThree, bulletFour];
 let imagePosition = 0;
 
 const toggleImageClass = function toggleImageClass(position) {
-  console.log('moving');
-  //imageStrip.toggleImageClass(imageClass[position]);
+  bullets[position].classList.toggle('active');
   imageStrip.classList.toggle(imageClass[position]);
 };
 
