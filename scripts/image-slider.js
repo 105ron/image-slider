@@ -19,22 +19,21 @@ const toggleImageClass = function toggleImageClass(position) {
 
 
 rightArrow.addEventListener("click", function() {
-  console.log('click');
   toggleImageClass(imagePosition);
-  imagePosition += 1;
+  imagePosition = (imagePosition === 4) ? 0 : imagePosition + 1;
   toggleImageClass(imagePosition);
 }, false);
 
 
 leftArrow.addEventListener("click", function() {
   toggleImageClass(imagePosition);
-  imagePosition -= 1;
+  imagePosition = (imagePosition === 0)? 4 : imagePosition - 1;
   toggleImageClass(imagePosition);
 }, false);
 
 const moveToBulletClick = function moveToBulletClick() {
   toggleImageClass(imagePosition);
-  imagePosition = this.getAttribute("data-position");
+  imagePosition = parseInt(this.getAttribute("data-position"));
   toggleImageClass(imagePosition);
 }
 
