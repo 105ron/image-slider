@@ -10,6 +10,10 @@ const imageClass = {
 };
 const bullets = document.getElementsByClassName('bullets');
 let imagePosition = 0;
+let now;
+let then = Date.now();
+let interval = 5000;
+let delta;
 
 
 const toggleImageClass = function toggleImageClass(position) {
@@ -17,21 +21,31 @@ const toggleImageClass = function toggleImageClass(position) {
   imageStrip.classList.toggle(imageClass[position]);
 };
 
+const resetTimer = function resetTimer() {
+  then = Date.now() //reset timer on click
+};
 
-rightArrow.addEventListener("click", function() {
+const moveRight = function moveRight() {
+  resetTimer();
   toggleImageClass(imagePosition);
   imagePosition = (imagePosition === 4) ? 0 : imagePosition + 1;
   toggleImageClass(imagePosition);
+};
+
+rightArrow.addEventListener("click", function() {
+  moveRight();
 }, false);
 
 
 leftArrow.addEventListener("click", function() {
+  resetTimer();
   toggleImageClass(imagePosition);
   imagePosition = (imagePosition === 0)? 4 : imagePosition - 1;
   toggleImageClass(imagePosition);
 }, false);
 
 const moveToBulletClick = function moveToBulletClick() {
+  resetTimer();
   toggleImageClass(imagePosition);
   imagePosition = parseInt(this.getAttribute("data-position"));
   toggleImageClass(imagePosition);
@@ -40,3 +54,12 @@ const moveToBulletClick = function moveToBulletClick() {
 Array.from(bullets).forEach(function(element) {
   element.addEventListener('click', moveToBulletClick);
 });
+
+(function autoSlide() { 
+    requestAnimationFrame(autoSlide);
+    now = Date.now();
+    delta = now - then;
+    if (delta > interval) {
+      moveRight();
+    }
+}());
